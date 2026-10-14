@@ -1,0 +1,2 @@
+# A4Tech Bloody W95 Max: let the logged-in user open /dev/hidraw* for configuration
+KERNEL=="hidraw*", ATTRS{idVendor}=="09da", ATTRS{idProduct}=="1434", TAG+="uaccess"

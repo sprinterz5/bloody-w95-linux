@@ -1,0 +1,7 @@
+# local-only: vendor binary patching, raw captures, build outputs
+local/
+wine/captures/
+*.so
+*.dll
+*.log
+__pycache__/

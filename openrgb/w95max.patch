@@ -1,0 +1,28 @@
+--- a/Controllers/A4TechController/BloodyMouseController/BloodyMouseController.h
++++ b/Controllers/A4TechController/BloodyMouseController/BloodyMouseController.h
+@@ -22,6 +22,7 @@
+ #define BLOODY_W70_MAX_PID                          0x79EF
+ #define BLOODY_W90_MAX_PID                          0x3666
+ #define BLOODY_W90_PRO_PID                          0x39B6
++#define BLOODY_W95_MAX_PID                          0x1434
+ 
+ /*-----------------------------------------------------*\
+ | Mousemat product IDs                                  |
+--- a/Controllers/A4TechController/BloodyMouseController/BloodyMouseControllerDetect.cpp
++++ b/Controllers/A4TechController/BloodyMouseController/BloodyMouseControllerDetect.cpp
+@@ -41,4 +41,5 @@
+ REGISTER_HID_DETECTOR_IPU("Bloody W70 Max",  DetectBloodyMouseControllers,  A4_TECH_VID,    BLOODY_W70_MAX_PID, 2,  0xFF33, 0x0518);
+ REGISTER_HID_DETECTOR_IPU("Bloody W90 Max",  DetectBloodyMouseControllers,  A4_TECH_VID,    BLOODY_W90_MAX_PID, 2,  0xFF33, 0x053D);
+ REGISTER_HID_DETECTOR_IPU("Bloody W90 Pro",  DetectBloodyMouseControllers,  A4_TECH_VID,    BLOODY_W90_PRO_PID, 2,  0xFF33, 0x054D);
++REGISTER_HID_DETECTOR_IPU("Bloody W95 Max",  DetectBloodyMouseControllers,  A4_TECH_VID,    BLOODY_W95_MAX_PID, 2,  0xFF33, 0x0578);
+ REGISTER_HID_DETECTOR_IPU("Bloody MP 50RS",  DetectBloodyMouseControllers,  A4_TECH_VID,    BLOODY_MP_50RS_PID, 2,  0xFFF2, 0x6009);
+--- a/Controllers/A4TechController/BloodyMouseController/RGBController_BloodyMouse.cpp
++++ b/Controllers/A4TechController/BloodyMouseController/RGBController_BloodyMouse.cpp
+@@ -115,6 +115,7 @@
+         case BLOODY_W70_MAX_PID:
+         case BLOODY_W90_MAX_PID:
+         case BLOODY_W90_PRO_PID:
++        case BLOODY_W95_MAX_PID:
+             layout = w90_max;
+             break;
+         case BLOODY_MP_50RS_PID:
