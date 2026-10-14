@@ -59,4 +59,12 @@ The RGB "direct mode" commands come from OpenRGB's `BloodyMouseController`
 Opcode 0x11 backlight semantics were first documented in
 [maxmati/a4tech-bloody-linux-driver](https://github.com/maxmati/a4tech-bloody-linux-driver).
 
-Not affiliated with A4Tech. Use at your own risk.
+## License
+
+MIT (see `LICENSE`), except `openrgb/w95max.patch`: it modifies OpenRGB source and,
+like OpenRGB, is GPL-2.0-or-later. This repository contains no A4Tech code, firmware
+or binaries — only independently written tools and observed protocol behaviour,
+documented for interoperability.
+
+Not affiliated with A4Tech. "A4Tech" and "Bloody" are used only to identify the
+hardware. Use at your own risk.
